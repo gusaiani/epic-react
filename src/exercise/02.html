@@ -32,11 +32,13 @@
     const span1 = React.createElement('span', {children: 'Hello'})
     const span2 = React.createElement('span', {children: ' World'})
 
-    const containerProps = {className: 'container', children: [span1, span2]}
+    const containerProps = {className: 'container'}
 
     const containerElement = React.createElement(
       'div',
-      containerProps
+      containerProps,
+      span1,
+      span2
     )
 
     ReactDOM.render(containerElement, rootElement)
